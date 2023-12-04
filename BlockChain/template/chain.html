@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Chain View</title>
+</head>
+<body>
+    <h1>Blockchain Chain View</h1>
+    <p>Chain details:</p>
+    <ul>
+        {% for block in blockchain.chain %}
+            <li>Block {{ block.index }} - Proof: {{ block.proof_no }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

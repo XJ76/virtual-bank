@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include static CSS file -->
+    <link rel="stylesheet" href="{% static 'css/signup_styles.css' %}">
+    <title>RBZ-Crypto Dollar - Sign Up</title>
+</head>
+<body>
+    
+    <main class="container">
+        <h1>RBZ-Crypto Dollar</h1>
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="First Name" id="first_name" name="first_name" required>
+            <input type="text" placeholder="Middle Name" id="middle_name" name="middle_name">
+            <input type="text" placeholder="Last Name" id="last_name" name="last_name" required>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+            <input type="tel" placeholder="Phone Number" id="phone_number" name="phone_number" required>
+            <input type="text" placeholder="Address" id="address" name="address" required>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+            <input type="password" placeholder="Confirm Password" id="password2" name="password2" required>
+            <button type="submit" id="signup-button" class="btn">Create Account</button>
+        </form>
+        <div class="loading" id="loading">
+            <div class="loader"></div>
+            <p>Creating your account...</p>
+        </div>
+        <div class="message" id="message"></div>
+        <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+    </main>
+    
+    <!-- Include JavaScript file for signup functionality -->
+    <script src="{% static 'signup_script.js' %}"></script>
+
+    <!-- Display error messages -->
+    <div>
+        <style>
+            h5 {
+                color: red;
+            }
+        </style>
+        {% for message in messages %}
+        <h5>{{ message }}</h5>
+        {% endfor %}
+    </div>
+</body>
+</html>

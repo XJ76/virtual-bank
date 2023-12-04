@@ -1,0 +1,97 @@
+/* Separate your CSS into an external stylesheet (signup_styles.css) for better maintainability. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode body {
+    background-color: #333;
+    color: white;
+}
+
+.container {
+    background-color: #011e1e70;
+    color: #ecf0f1;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(left, #2980b9, #2d163e, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+.loading {
+    display: none;
+    margin-top: 20px;
+}
+
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.message {
+    margin-top: 20px;
+}
+
+/* Add your dark mode styles if needed */
+
+/* Add styles for the toggle button or any other elements */
+
+/* Add responsive design styles using media queries */

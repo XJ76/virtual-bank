@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RBZ-Crypto Dollar - Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS and JavaScript files here -->
+    <link rel="icon" type="image/png" href="{% static 'signin/images/icons/favicon.ico' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/animate/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/css-hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/animsition/css/animsition.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/vendor/daterangepicker/daterangepicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'signin/css/main.css' %}">
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('images/ivana-cajina-GvD31SehHbA-unsplash');">
+            <div class="wrap-login100 p-t-30 p-b-50">
+                <span class="login100-form-title p-b-41">Login</span>
+                <form class="login100-form validate-form p-b-33 p-t-5" method="post">
+                    {% csrf_token %}
+                    <div class="wrap-input100 validate-input" data-validate="Enter Account Number">
+                        <input class="input100" type="text" name="account_number" placeholder="Account Number">
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Password">
+                        <input class="input100" type="password" name="password" id="password" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                    </div>
+                    <p class="text-base">Don't have an account? <a href="{% url 'signup' %}">Create Account</a></p>
+                    <div class="container-login100-form-btn m-t-32">
+                        <button class="login100-form-btn">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Secured by WYVERN. RBZ-Crypto Dollar. All rights reserved.</p>
+    </footer>
+    
+    <style>
+        /* Add your custom styles for the footer here */
+        footer {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+            color: #fff;
+        }
+    
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</body>
+</html>
